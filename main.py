@@ -284,6 +284,8 @@ listbox_employees = Listbox(frame_employees, width=40)
 listbox_employees.grid(row=5, column=0, columnspan=2)
 listbox_employees.bind("<<ListboxSelect>>", select_employee)
 
+
+
 # Klienci
 frame_clients = LabelFrame(root, text="Klienci")
 frame_clients.grid(row=1, column=2, padx=10, pady=10, sticky="nw")
