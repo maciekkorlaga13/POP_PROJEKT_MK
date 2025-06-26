@@ -148,6 +148,7 @@ def update_employee():
         button_emp_cancel.grid_remove()
         selected_employee_index = None
 
+
 def update_employee_list():
     listbox_employees.delete(0, END)
     for e in employees:
