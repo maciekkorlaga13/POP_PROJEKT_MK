@@ -52,7 +52,7 @@ def cancel_client_edit():
     button_cli_cancel.grid_remove()
     selected_client_index = None
 
-# ========== PUNKTY ==========
+
 def add_pickup_point():
     name = entry_point_name.get()
     location = entry_point_location.get()
@@ -286,7 +286,6 @@ listbox_employees.bind("<<ListboxSelect>>", select_employee)
 
 
 
-# Klienci
 frame_clients = LabelFrame(root, text="Klienci")
 frame_clients.grid(row=1, column=2, padx=10, pady=10, sticky="nw")
 entry_cli_name = Entry(frame_clients)
@@ -312,7 +311,8 @@ listbox_clients = Listbox(frame_clients, width=40)
 listbox_clients.grid(row=5, column=0, columnspan=2)
 listbox_clients.bind("<<ListboxSelect>>", select_client)
 
-# ========== INICJALIZACJA ==========
+
+
 for name, location in [("Warszawa Punkt A", "Warszawa"), ("Kraków Punkt B", "Kraków"), ("Gdańsk Punkt C", "Gdańsk")]:
     coords = get_coordinates(location)
     pickup_points.append({"name": name, "location": location, "coords": coords, "marker": None})
