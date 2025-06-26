@@ -154,6 +154,7 @@ def update_employee_list():
     for e in employees:
         listbox_employees.insert(END, f"{e['name']} {e['surname']} ({e['pickup']})")
 
+
 def select_employee(event):
     global selected_employee_index
     selection = listbox_employees.curselection()
